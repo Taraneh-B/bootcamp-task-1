@@ -1,0 +1,253 @@
+@import url("./fonts.css");
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Vazirmatn" ;
+
+}
+
+:root {
+    --color-primary: #065f46;
+    --color-secondary: #16a34a;
+    --color-white: #ecfdf5;
+    --color-back-header: #6ee7b7;
+    --color-body: #696969;
+    --color-navbar: #064e3b;
+    --color-name: #1E1E1E;
+    --color-secondary-inside:#064e3b;
+    --color-date:#1d4ed8;
+
+
+
+    --border-radius-small:10px;
+    --border-radius-md:20px;
+    --border-radius-lg:30px;
+    --border-radius-xlg:40px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main .container {
+    display: grid;
+    grid-template-columns: 500px;
+
+}
+.title{
+    font-size: 2rem;
+    padding: 1rem 1rem;
+    margin: 1rem;
+    color: #0369a1;
+}
+
+/* BTN */
+.btn {
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    margin: 0.5rem;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: var(--border-radius-small);
+    font-size: 1.6rem;
+}
+
+.btn.btn--primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 1rem 1rem;
+    grid-row: -2/-1;
+    width: 130px;
+    height: 50px;
+
+}
+
+.btn.btn--secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-secondary-inside);
+    font-size: 2rem;
+    padding: 1rem 1.3rem;
+
+}
+
+/* CARD */
+.card {
+    /* border: 1px solid tomato; */
+    display: grid;
+    grid-template-columns: 200px 300px;
+    grid-template-rows: 50px 50px 50px;
+    padding: 2rem 1.5rem;
+    width: 70vw;
+    height: auto;
+    margin: 1rem;
+}
+
+.card .card__header {
+    display: flex;
+    align-items: center;
+
+}
+
+.card__header-date {
+    display: flex;
+    align-self: center;
+    font-size: 1.5rem;
+    color: var(--color-date);
+}
+
+.card .card__header-title {
+    font-size: 1.6rem;
+    color: var(--color-navbar);
+}
+
+.card__body {
+    /* display: grid; */
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding: 0.7rem;
+
+}
+
+.card__body-title {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+}
+
+.card__body p {
+    font-size: 1rem;
+    margin-top: 0;
+}
+
+.card__info {
+    display: flex;
+    flex-direction: row;
+    grid-row: 3/4;
+
+}
+
+.card__info h4 {
+    font-size: 1.4rem;
+    align-self: center;
+    margin-right: 0.7rem;
+}
+
+.card__info img {
+    align-self: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius-md);
+}
+
+
+@media screen and (min-width:667px) {
+    .main {
+        display: grid;
+        grid-template-columns: 500px 500px;
+    }
+    .title{
+        font-size: 2.5rem;
+        padding: 1rem 1rem;
+        margin: 1.5rem;
+    }
+
+    .card__info img {
+        align-self: center;
+        width: 50px;
+        height: 50px;
+        border-radius: var(--border-radius-lg);
+        margin-top: 1.5rem;
+    }
+
+    .card__info h4 {
+        font-size: 1.8rem;
+        /* margin-right: 0.7rem; */
+    }
+
+    .card__body {
+        padding: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .card__body p {
+        font-size: 1.2rem;
+        margin-top: 0;
+    }
+
+    .card__body-title {
+        font-size: 2.2rem;
+        margin-bottom: 0;
+    }
+
+    .card .card__header-title {
+        font-size: 2rem;
+    }
+
+    .card__header-date {
+        font-size: 1.7rem;
+    }
+}
+
+
+@media screen and (min-width:768px) {
+    .main {
+        display: grid;
+        grid-template-rows: 400px 400px;
+        grid-template-columns: 600px 600px 600px;
+    }
+    .title{
+        font-size: 3.2rem;
+    }
+
+    .card {
+        grid-template-columns: 300px 300px;
+        grid-template-rows: 80px 80px 80px;
+    }
+
+    .card__info img {
+        width: 70px;
+        height: 70px;
+        border-radius: var(--border-radius-xlg);
+    }
+
+    .card__info h4 {
+        font-size: 2.5rem;
+        padding: 0.5rem;
+
+    }
+
+    .card__body-title {
+        font-size: 2.7rem;
+    }
+
+    .card__body p {
+        font-size: 1.8rem;
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+    }
+    .btn.btn--primary{
+        padding: 1.5rem 1.5rem;
+        width: 150px;
+        height: 60px;
+    }
+
+    .card .card__header-title {
+        font-size: 2.5rem;
+    }
+
+}
